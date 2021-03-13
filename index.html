@@ -220,15 +220,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
         <script src="js/jquery.flexslider.js"></script> 
         <script type="text/javascript">
-            $(window).load(function(){
+            <!--$(window).load(function(){-->
               $('.flexslider').flexslider({
                 animation: "slide",
                 slideshowSpeed: 5000,
 		        animationSpeed: 2000
               });
-            });
-          </script>
-          <script>
+            <!--});-->
+		
               $(".myaccount").click(function(){
                 $(".myaccount_menu").fadeToggle('500');
                 $(".searchbar").fadeOut('100000');
@@ -241,9 +240,6 @@
                 e.preventDefault();
                 $(this).tab('show');
               });
-            </script>        
-        <!-- Optional FlexSlider Additions -->
-        <!--<script src="js/jquery.easing.js"></script>
-        <script src="js/jquery.mousewheel.js"></script>-->
+            </script>                
     </body>
 </html>
