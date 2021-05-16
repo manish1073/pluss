@@ -1,0 +1,419 @@
+@import "fonts";
+@import "colors";
+@import "animations";
+/*@import "mixins";*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $whiteColor;
+    font-family: $heading_font; 
+    color: $lightColor;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column ;
+    height: 100vh;
+}
+
+.vh-15{height:15vh;}
+.vh-80{height:80vh;}
+.vh-5{height:5vh;}
+
+h1,h2,h3,h4,h5,h6{
+    color:$primaryColor;
+}
+
+p{
+    font-family: $text_font; 
+}
+
+a, a:hover, a:focus, a:active, a:visited{
+    font-family: $text_font; 
+    text-decoration:none;
+    cursor:pointer;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+/****************Theme Button Start*****************************/
+.logInBtn{
+    width: 100%;
+    background-color: $themeColor;
+    border-radius: 4px;
+    color: $whiteColor;
+    filter: drop-shadow(0px 7px 11px rgba(237, 82, 67, 0.33));
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 22px;
+    padding:10px 0px;
+    margin:10px 0px;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+    &:hover{
+        background: $hoverColor;
+    }
+}
+/**************************Theme Button End*************************/
+
+.main{
+    width:100%;
+    height: 100vh;
+    position:relative;
+    .bgImage{   
+        height: 100vh;
+        background: url("../images/familyBanner.svg");
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    form+p{
+        margin:30px 0px;
+        font-weight: 300;
+        color: $lightColor;
+        font-family: $heading_font;
+    }    
+    .loginContent{
+        margin: 0 auto;
+        padding: 30px;
+        h1{
+            font-weight: 500;
+            font-size: 48px;
+            font-size: 45px;
+            text-transform: capitalize;
+        }
+        p{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            width: 84%;
+            margin: 20px 0px;
+        }
+        img{
+            width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .w-auto{
+            width:auto;        
+        }
+    }
+}
+
+    
+.logo{
+    font-weight: 500;
+    font-size: 36px;
+    color: $themeColor;
+    font-family: $text_font;
+    display: block;
+    // margin-top: 35px;
+    &:hover{
+        color: $themeColor;
+    }
+}
+
+/************************Form Heading Start*************************/
+.formHeading h2{
+    padding-top: 25px;
+    font-size: 36px;
+}
+/************************Form Heading End*************************/
+
+/**************************Input Fields Start******************************/
+.group {
+    position: relative;
+    margin : 60px 0px 25px 0px;
+    input {
+        font-size: 16px;
+        padding: 10px 10px 10px 10px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid $themeColor;
+        background: none;
+        color: $primaryColor;
+        &:focus {
+            outline: none;
+        }
+        &:focus ~ .highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease;
+        }
+        &:focus ~ label, &:valid ~ label {
+            top: -20px;
+            font-size: 14px;
+        }
+        &:focus ~ .bar:before, &:focus ~ .bar:after {
+            width: 50%;
+        } 
+    }
+    .input-group-text{
+        cursor: pointer;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        background-color: transparent; 
+        border: none;
+    }
+    .bar {
+        position: relative;
+        display: block;
+        width: 100%;
+        &:before, &:after {
+            content: '';
+            height: 3px;
+            width: 0;
+            bottom: 0px;
+            position: absolute;
+            background: $themeColor;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+        &:before {
+            left: 50%;
+        }
+        &:after {
+            right: 50%;
+        }
+    }
+    .highlight {
+        position: absolute;
+        height: 0%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    label {
+        font-size: 14px;
+        font-weight: 300;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        color:$lightColor;
+    }
+}
+
+.inputActive{
+    top: -20px !important;
+}
+/**************************Input Fields End******************************/
+
+/********************Social Buttons Start*******************************/
+.socialButton {
+    display: flex;
+    justify-content: space-between;
+    place-items: center; 
+    margin-bottom: 20px;
+    button{
+        width: 48%;
+        padding: 10px;
+        border: 1px solid $borderColor;
+        background: none;
+        font-size: 12px;
+        line-height: 15px;
+        color: $primaryColor;
+        border-radius: 3px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;        
+        &:hover {
+            box-shadow: 0px 1px 3px #ccc;
+        }
+        img{
+            width: 22px;
+            margin-right: 10px;
+        }
+    }
+}
+/********************Social Buttons End*******************************/
+
+
+/*********************Modal Css Start******************************/
+p a{
+    font-weight: 500;
+    color: $themeColor;
+    &:hover{
+        color: $hoverColor;
+    }
+    &:focus, &:active, &:visited{
+        color: $themeColor;
+    }
+}
+
+// .modal {
+//     top: 10% !important;
+// }
+
+.modal-dialog {
+    // width: 750px;
+    .modal-body {
+        display: flex;
+        .close{
+            position: absolute;
+            top: 0;
+            right: 9px;
+            font-size: 35px;
+        }
+    }
+    
+    .forgotPassswordRight {
+        padding: 0px 20px;
+        width: 100%;
+        h3{
+            font-size: 26px;
+            // margin-bottom: 35px;
+        }
+        .group{
+            margin: 40px 0px 20px 0px;
+        }
+    }
+
+    .forgotPassswordRight p {
+        font-size: 16px;
+        padding-top: 12px;
+    }
+  
+}
+/*********************Modal Css End******************************/
+
+/**************Footer Start*******************/
+.footer{
+    .footerContent{
+        width:100%;
+        margin-top: auto;
+        background-color: $whiteColor;
+        height: 100%;
+        text-align: center;   
+        ul{
+            list-style: none;  
+            margin-bottom: 0px;  
+            li{
+                display: inline-block;
+                padding:0px 14px;
+                position: relative;
+                font-size: 14px;
+                font-weight: 300;
+                &:first-child::before{
+                    display: none;
+                }
+                &::before{
+                    content:"";
+                    width:6px;
+                    height: 6px;
+                    background-color: $bulletColor;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 7px;
+                    left: -3px;                    
+                }
+                a{
+                    color: $lightColor;
+                    &:hover{
+                        color:$primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+/**************Footer End*******************/
+
+
+/******************Responsive CSS Code Start********************/
+@media screen and (max-width: 768px) {
+    .footer{
+        display: none;
+    }
+
+    h1{
+        font-size: 26px !important;
+    }
+
+    .main {
+        height: auto !important;
+        padding: 0px 10px;
+        .bgImage{   
+            height: auto !important;
+            background-position: center 95px!important;;
+            background-size: contain !important;
+        }
+    }
+
+    .loginContent {  
+        padding: 0px !important;   
+        p{
+            width: 100% !important;
+            font-size: 16px !important;
+        }   
+    }
+
+    .formHeading h2 {
+        padding-top: 0px;
+        font-size: 24px;
+    }
+
+    .group {
+        margin : 40px 0px 25px 0px;
+    }
+    .w-auto{
+       width:90%;
+    }
+
+    .vh-80{
+        height:auto;
+    }
+
+    .mobileBox{
+        background: #FFFFFF;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.21);
+        border-radius: 4px;
+        
+        padding: 10px;
+        margin: 160px 8px 35px;
+        display: block;
+    }
+
+    .socialButton button img {
+        width: 20px;
+        margin-right: 4px;
+    }
+
+    /*****************Modal*************/
+    .modal-dialog {
+        max-width: 75%;
+        margin: 0 auto;
+        .modal-body {
+            display: block;
+            .forgotPassswordLeft img{
+                width:100%;
+            }
+        }
+    }
+    /*****************Modal*************/
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 725px;
+        margin: 1.75rem auto;
+    }
+}
+/******************Responsive CSS Code End********************/

@@ -1,0 +1,27 @@
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: $themeColor;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@-moz-keyframes inputHighlighter {
+    from {
+        background: $themeColor;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@keyframes inputHighlighter {
+    from {
+        background: $themeColor;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
