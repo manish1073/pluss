@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Legacy | Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div class="main">
+		<div class="container bgImage">
+		
+			<!----Header---->
+			<div class="row vh-15">
+				<div class="col-md-12">
+					<a href="#" class="logo mt-4">LOGO HERE</a>
+				</div>
+			</div>
+			<!----Header---->
+
+			<!----Content---->
+			<div class="row vh-80 mobileBox">
+				<div class="col-md-8">                
+					<div class="loginContent">
+						<h1 class="mt-2">Make Most of Your Professional Life</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						</p>						
+					</div>
+				</div>
+				<div class="col-md-4">
+					<form action="login-password.html" method="POST">
+						<div class="formHeading">
+							<h2>Welcome</h2>                        
+						</div>
+						<div class="group">
+							<input type="email" required name="txtusername">
+							<label>Enter Your Email</label>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+						<button type="submit" class="logInBtn">Continue</button>
+					</form>
+					<p>Or</p>
+					<div class="socialButton">
+						<button type="button"><img src="images/googleIcon.svg" alt="Google" /> Google </button>
+						<button type="button"><img src="images/facebookIcon.svg" alt="Facebook" /> Facebook </button>
+					</div>
+				</div>
+			</div>
+			<!----Content---->
+			
+			<!----Footer---->
+			<div class="row footer vh-5">
+				<div class="col-md-12"> 
+					<div class="footerContent">
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Terms and Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!----Footer---->
+			
+		</div>
+	</div>
+	
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>   
+    <script>
+        $("input").on('change', function(){
+            if ($(this).val().length > 0) {
+                $(this).siblings('label').addClass('inputActive');
+            }
+            else {
+                $(this).siblings('label').removeClass('inputActive');
+            }
+        });
+    </script> 
+</body>
+</html>
